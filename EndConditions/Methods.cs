@@ -11,6 +11,8 @@ namespace EndConditions
     using Exiled.API.Enums;
     using Exiled.API.Features;
     using Exiled.Events.EventArgs;
+    using Exiled.Events.EventArgs.Server;
+    using PlayerRoles;
 
     /// <summary>
     /// Various required methods.
@@ -42,7 +44,7 @@ namespace EndConditions
                     continue;
                 }
 
-                if (player.Role.Type == RoleType.Tutorial && plugin.Config.IgnoreTutorials)
+                if (player.Role.Type == RoleTypeId.Tutorial && plugin.Config.IgnoreTutorials)
                     continue;
 
                 yield return RoleName(player.Role.Type);
@@ -67,33 +69,32 @@ namespace EndConditions
                 Server.FriendlyFire = true;
         }
 
-        private static string RoleName(RoleType roleType)
+        private static string RoleName(RoleTypeId RoleTypeId)
         {
-            return roleType switch
+            return RoleTypeId switch
             {
-                RoleType.None => nameof(RoleType.None),
-                RoleType.Scp173 => nameof(RoleType.Scp173),
-                RoleType.ClassD => nameof(RoleType.ClassD),
-                RoleType.Spectator => nameof(RoleType.Spectator),
-                RoleType.Scp106 => nameof(RoleType.Scp106),
-                RoleType.NtfSpecialist => nameof(RoleType.NtfSpecialist),
-                RoleType.Scp049 => nameof(RoleType.Scp049),
-                RoleType.Scientist => nameof(RoleType.Scientist),
-                RoleType.Scp079 => nameof(RoleType.Scp079),
-                RoleType.ChaosConscript => nameof(RoleType.ChaosConscript),
-                RoleType.Scp096 => nameof(RoleType.Scp096),
-                RoleType.Scp0492 => nameof(RoleType.Scp0492),
-                RoleType.NtfSergeant => nameof(RoleType.NtfSergeant),
-                RoleType.NtfCaptain => nameof(RoleType.NtfCaptain),
-                RoleType.NtfPrivate => nameof(RoleType.NtfPrivate),
-                RoleType.Tutorial => nameof(RoleType.Tutorial),
-                RoleType.FacilityGuard => nameof(RoleType.FacilityGuard),
-                RoleType.Scp93953 => nameof(RoleType.Scp93953),
-                RoleType.Scp93989 => nameof(RoleType.Scp93989),
-                RoleType.ChaosRifleman => nameof(RoleType.ChaosRifleman),
-                RoleType.ChaosRepressor => nameof(RoleType.ChaosRepressor),
-                RoleType.ChaosMarauder => nameof(RoleType.ChaosMarauder),
-                _ => nameof(RoleType.None)
+                RoleTypeId.None => nameof(RoleTypeId.None),
+                RoleTypeId.Scp173 => nameof(RoleTypeId.Scp173),
+                RoleTypeId.ClassD => nameof(RoleTypeId.ClassD),
+                RoleTypeId.Spectator => nameof(RoleTypeId.Spectator),
+                RoleTypeId.Scp106 => nameof(RoleTypeId.Scp106),
+                RoleTypeId.NtfSpecialist => nameof(RoleTypeId.NtfSpecialist),
+                RoleTypeId.Scp049 => nameof(RoleTypeId.Scp049),
+                RoleTypeId.Scientist => nameof(RoleTypeId.Scientist),
+                RoleTypeId.Scp079 => nameof(RoleTypeId.Scp079),
+                RoleTypeId.ChaosConscript => nameof(RoleTypeId.ChaosConscript),
+                RoleTypeId.Scp096 => nameof(RoleTypeId.Scp096),
+                RoleTypeId.Scp0492 => nameof(RoleTypeId.Scp0492),
+                RoleTypeId.NtfSergeant => nameof(RoleTypeId.NtfSergeant),
+                RoleTypeId.NtfCaptain => nameof(RoleTypeId.NtfCaptain),
+                RoleTypeId.NtfPrivate => nameof(RoleTypeId.NtfPrivate),
+                RoleTypeId.Tutorial => nameof(RoleTypeId.Tutorial),
+                RoleTypeId.FacilityGuard => nameof(RoleTypeId.FacilityGuard),
+                RoleTypeId.Scp939 => nameof(RoleTypeId.Scp939),
+                RoleTypeId.ChaosRifleman => nameof(RoleTypeId.ChaosRifleman),
+                RoleTypeId.ChaosRepressor => nameof(RoleTypeId.ChaosRepressor),
+                RoleTypeId.ChaosMarauder => nameof(RoleTypeId.ChaosMarauder),
+                _ => nameof(RoleTypeId.None)
             };
         }
     }

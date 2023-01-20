@@ -32,6 +32,9 @@ namespace EndConditions
         /// <inheritdoc/>
         public bool IsEnabled { get; set; } = true;
 
+        /// <inheritdoc/>
+        public bool Debug { get; set; } = true;
+
         /// <summary>
         /// Gets or sets the name of the file to store the win conditions config in.
         /// </summary>

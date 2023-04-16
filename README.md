@@ -1,3 +1,5 @@
+[![Github All Releases](https://img.shields.io/github/downloads/Misaka-SL-Project/EndConditions/total.svg)](https://github.com/Misaka-SL-Project/EndConditions/releases) 
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/Misaka-SL-Project/EndConditions/graphs/commit-activity)
 # EndConditions
 - Grants the ability to set custom round end conditions using [EXILED](https://github.com/Exiled-Team/EXILED/).
 

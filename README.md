@@ -26,8 +26,7 @@
 - Scp079
 - Scp096
 - Scp0492
-- Scp93953
-- Scp93989
+- Scp939
 - NtfScientist
 - ChaosConscript
 - ChaosRifleman

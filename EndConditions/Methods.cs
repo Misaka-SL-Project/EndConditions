@@ -59,7 +59,6 @@ namespace EndConditions
         public void EndGame(EndingRoundEventArgs ev, LeadingTeam leadingTeam)
         {
             ev.LeadingTeam = leadingTeam;
-            ev.IsAllowed = true;
             ev.IsRoundEnded = true;
 
             API.BlacklistedPlayers.Clear();
@@ -69,9 +68,9 @@ namespace EndConditions
                 Server.FriendlyFire = true;
         }
 
-        private static string RoleName(RoleTypeId RoleTypeId)
+        private static string RoleName(RoleTypeId roleTypeId)
         {
-            return RoleTypeId switch
+            return roleTypeId switch
             {
                 RoleTypeId.None => nameof(RoleTypeId.None),
                 RoleTypeId.Scp173 => nameof(RoleTypeId.Scp173),

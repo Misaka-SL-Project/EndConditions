@@ -33,7 +33,6 @@ namespace EndConditions
         /// <inheritdoc cref="Exiled.Events.Handlers.Server.OnEndingRound(EndingRoundEventArgs)"/>
         public void OnEndingRound(EndingRoundEventArgs ev)
         {
-            ev.IsAllowed = false;
             ev.IsRoundEnded = false;
 
             if (Warhead.IsDetonated && plugin.Config.EndOnDetonation)

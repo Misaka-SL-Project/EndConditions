@@ -29,7 +29,7 @@ namespace EndConditions
         public Methods Methods { get; private set; }
 
         /// <inheritdoc/>
-        public override Version RequiredExiledVersion { get; } = new(6, 0, 0);
+        public override Version RequiredExiledVersion { get; } = new(7, 0, 0);
 
         /// <inheritdoc/>
         public override void OnEnabled()

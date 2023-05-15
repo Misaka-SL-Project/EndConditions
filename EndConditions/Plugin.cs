@@ -29,6 +29,9 @@ namespace EndConditions
         public Methods Methods { get; private set; }
 
         /// <inheritdoc/>
+        public override Version Version { get; } = new(2, 0, 0);
+
+        /// <inheritdoc/>
         public override Version RequiredExiledVersion { get; } = new(7, 0, 0);
 
         /// <inheritdoc/>

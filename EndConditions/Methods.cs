@@ -47,7 +47,7 @@ namespace EndConditions
                 if (player.Role.Type == RoleTypeId.Tutorial && plugin.Config.IgnoreTutorials)
                     continue;
 
-                yield return RoleName(player.Role.Type);
+                yield return player.Role.Type.ToString();
             }
         }
 
@@ -66,35 +66,6 @@ namespace EndConditions
 
             if (plugin.Config.RoundEndFf)
                 Server.FriendlyFire = true;
-        }
-
-        private static string RoleName(RoleTypeId roleTypeId)
-        {
-            return roleTypeId switch
-            {
-                RoleTypeId.None => nameof(RoleTypeId.None),
-                RoleTypeId.Scp173 => nameof(RoleTypeId.Scp173),
-                RoleTypeId.ClassD => nameof(RoleTypeId.ClassD),
-                RoleTypeId.Spectator => nameof(RoleTypeId.Spectator),
-                RoleTypeId.Scp106 => nameof(RoleTypeId.Scp106),
-                RoleTypeId.NtfSpecialist => nameof(RoleTypeId.NtfSpecialist),
-                RoleTypeId.Scp049 => nameof(RoleTypeId.Scp049),
-                RoleTypeId.Scientist => nameof(RoleTypeId.Scientist),
-                RoleTypeId.Scp079 => nameof(RoleTypeId.Scp079),
-                RoleTypeId.ChaosConscript => nameof(RoleTypeId.ChaosConscript),
-                RoleTypeId.Scp096 => nameof(RoleTypeId.Scp096),
-                RoleTypeId.Scp0492 => nameof(RoleTypeId.Scp0492),
-                RoleTypeId.NtfSergeant => nameof(RoleTypeId.NtfSergeant),
-                RoleTypeId.NtfCaptain => nameof(RoleTypeId.NtfCaptain),
-                RoleTypeId.NtfPrivate => nameof(RoleTypeId.NtfPrivate),
-                RoleTypeId.Tutorial => nameof(RoleTypeId.Tutorial),
-                RoleTypeId.FacilityGuard => nameof(RoleTypeId.FacilityGuard),
-                RoleTypeId.Scp939 => nameof(RoleTypeId.Scp939),
-                RoleTypeId.ChaosRifleman => nameof(RoleTypeId.ChaosRifleman),
-                RoleTypeId.ChaosRepressor => nameof(RoleTypeId.ChaosRepressor),
-                RoleTypeId.ChaosMarauder => nameof(RoleTypeId.ChaosMarauder),
-                _ => nameof(RoleTypeId.None)
-            };
         }
     }
 }

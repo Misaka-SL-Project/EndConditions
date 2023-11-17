@@ -31,7 +31,7 @@ jobs:
       - name: setup-msbuild
         uses: microsoft/setup-msbuild@v1.1.3
         
-      - name: Build QQBOT for release
+      - name: Build EndConditions for release
         run: msbuild EndConditions\EndConditions.csproj -t:build -verbosity:diag -property:Configuration=Release
           
       - name: Upload artifacts
